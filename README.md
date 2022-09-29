@@ -17,7 +17,7 @@ HealthLamp Air is a hardware IOT project based on the ESP8266 microchip. It's de
 | Humidity sensor | 0%-99% RH (±2% RH)|
 | Power input | 5V DC 1000 mA |
 
-![sketch](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/tree/master/img/sketch.png)
+![sketch](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/sketch.png?raw=true)
 
 
 # Design & development

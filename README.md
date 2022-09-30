@@ -17,7 +17,7 @@ Project development included the following parts:
 
 ## Some photos from the above stages:
 
-### Looking for a design concept (Fusion 360 / 3DS Max):
+### Product design development (Fusion 360 / 3DS Max):
 
 |  |
 | --- |

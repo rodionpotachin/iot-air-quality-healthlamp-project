@@ -17,13 +17,15 @@ Project development included the following parts:
 
 ## Some photos from the above stages:
 
-| Developing a design concept (Fusion 360 / 3DS Max): |
+### Looking for a design concept (Fusion 360 / 3DS Max):
+
+|  |
 | --- |
-| 1) Internal & external design (section view):
+| Internal & external design (section view):
 ![Render1](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/Render1.PNG?raw=true) |
-| 2) Embedded lightning air quality visualization concept:
+| Embedded lightning air quality visualization concept:
 ![Render3](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/Render3.png?raw=true) |
-| 3) Interior design concept:
+| Interior design concept:
 ![Render2](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/Render2.jpg?raw=true)|
 
 # Technical specification

@@ -19,6 +19,9 @@ Project development included the following parts:
 
 ![Render1](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/Render1.PNG?raw=true)
 
+## Hardware prototype development and components selection (Easy EDA):
+
+## Product design and idea development (Autodesk Fusion 360 / 3ds Max):
 
 # Technical specification
 

@@ -21,7 +21,7 @@ Project development included the following parts:
 
 ## Hardware development (Easy EDA):
 
-![PCB](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/PCB.png?raw=true)
+![PCB](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/PCB.png?raw=false)
 
 ## Prototype assembly and testing:
 

@@ -9,24 +9,16 @@ The main idea of this device is to be a minimalistic stylish part of your house 
 I decided to use natural material and developed the special conical design which provide unique embedded lightning air quality visualization and great airflow.
 
 Project development included the following parts:
-1. Hardware prototype development and components selection
+1. Product design and idea development
+2. Hardware prototype development and components selection
 2. Software prototype development
-2. Product design development
 3. Body molding and internal components printing
 4. Prototype assembly and testing
 
-## Some photos from the above stages:
+## Product design and idea development (Autodesk Fusion 360 / 3ds Max):
 
-### Product design development (Fusion 360 / 3DS Max):
+![Render1](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/Render1.PNG?raw=true)
 
-|  |
-| --- |
-| Internal & external design (section view):
-![Render1](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/Render1.PNG?raw=true) |
-| Embedded lightning air quality visualization concept:
-![Render3](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/Render3.png?raw=true) |
-| Interior design concept:
-![Render2](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/Render2.jpg?raw=true)|
 
 # Technical specification
 

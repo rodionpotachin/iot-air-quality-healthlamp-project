@@ -1,4 +1,4 @@
-# HealthLamp
+![Intro](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/Intro.png?raw=true)
 
 HealthLamp Air is a hardware IOT project based on the ESP8266 microchip. It's designed to measure, record and visualize the quality of air in your house in real time.
 

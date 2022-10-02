@@ -15,13 +15,15 @@ Project development included the following parts:
 3. Body molding and internal components printing
 4. Prototype assembly and testing
 
-## Product design and idea development (Autodesk Fusion 360 / 3ds Max):
+## Product design development (Autodesk Fusion 360 / 3ds Max):
 
 ![Render1](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/Render1.PNG?raw=true)
 
-## Hardware prototype development and components selection (Easy EDA):
+## Hardware development (Easy EDA):
 
-## Product design and idea development (Autodesk Fusion 360 / 3ds Max):
+## Prototype assembly and testing:
+
+![MVP](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/MVP.png?raw=true)
 
 # Technical specification
 

@@ -27,7 +27,7 @@ Project development included the following parts:
 
 ## Mobile app dashboard (designed in Blynk IoT platform environment):
 
-
+![App](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/App.png?raw=true)
 
 # Technical specification
 

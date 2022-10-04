@@ -6,7 +6,7 @@ HealthLamp Air is a hardware IoT project based on the ESP8266 microchip. It's de
 
 The main idea of this device is to be a minimalistic stylish part of your house design while offering a full range of modern air quality control capabilities.
 
-I decided to use natural material and developed the special conical design which provide unique embedded lightning air quality visualization and great airflow.
+I decided to use the natural materials and developed the special conical design which provide stylish lightning air quality visualization and great airflow.
 
 ![Features](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/Features.png?raw=true)
 
@@ -52,7 +52,7 @@ All information from the device is stored and visualized in [Blynk](https://blyn
 
 Project diagram (at the current moment):  
 
-![](?raw=true)
+![ProjectDiagram](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/ProjectDiagram.png?raw=true)
 
 # Data validation results:
 

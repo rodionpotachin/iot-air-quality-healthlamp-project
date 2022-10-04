@@ -8,6 +8,8 @@ The main idea of this device is to be a minimalistic stylish part of your house 
 
 I decided to use natural material and developed the special conical design which provide unique embedded lightning air quality visualization and great airflow.
 
+![Features](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/Features.png?raw=true)
+
 Project development included the following parts:
 1. Product design and idea development
 2. Hardware prototype development and components selection
@@ -31,7 +33,7 @@ Project development included the following parts:
 
 ![App](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/App.png?raw=true)
 
-# Technical specification
+## Technical specification
 
 | Parameter  | Description  |
 | ---------- | ------------ |
@@ -42,7 +44,26 @@ Project development included the following parts:
 | Humidity sensor | 0%-99% RH (±2% RH)|
 | Power input | 5V DC 1000 mA |
 
-# Project status
+# Software development
+
+The first project's draft was developed in Arduino IDE environment. Currently, all development is occurring in the [PlatformIO](https://platformio.org) framework.
+
+All information from the device is stored and visualized in [Blynk](https://blynk.io) IoT framework (legacy one). A mobile app is developed in the Blynk no-code environment.
+
+Project diagram (at the current moment):  
+
+![](?raw=true)
+
+# Data validation results:
+
+The device is currently working for a year. Thousands of rows with multiple data were collected during this time.
+In the below case studies I'm trying to check their accuracy and show some interesting facts and observations which were made during this time.
+
+## Case # 1
+
+## Case # 2
+
+## Case # 3
 
 # License
 

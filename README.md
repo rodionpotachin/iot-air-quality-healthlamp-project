@@ -1,6 +1,6 @@
 ![Intro](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/Intro.png?raw=true)
 
-HealthLamp Air is an IoT project built on the ESP8266 microchip. It's designed to measure, record and visualize the quality of air in your house in real time in a the stylish & unique way.
+HealthLamp Air is an IoT project built on the ESP8266 microchip. It's designed to measure, record and visualize the quality of air in your house in real time in the stylish & unique way.
 
 # Design & development
 
@@ -56,7 +56,7 @@ Project diagram (at the current moment):
 
 # Data validation results:
 
-The device is currently working for a year. Thousands of rows with multiple data were collected during this time.
+The device prototype is currently working for a year in my house. Thousands of rows with multiple data were collected during this time.
 In the below case studies I'm trying to check their accuracy and show some interesting facts and observations which were made during this time.
 
 ## Case # 1

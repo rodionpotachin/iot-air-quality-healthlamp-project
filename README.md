@@ -65,14 +65,14 @@ I took 7 days of historical CO2 data measurement from my home and ran a small an
 
 I hope the below graphs and observations will show CO2 sensor work, possible non-standard use scenarios, and just some interesting facts about CO2 itself. I also want to highlight that I’m not showing here the classic sensor’s use case - then you use the sensor to check when you should open a window.
 
-Graph 1 "CO2 (ppm) vs Time (hours) - All at once"
+**Graph 1 "CO2 (ppm) vs Time (hours) - All at once"**
 ![CO2_All](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/CO2_All.png?raw=true)
 
 You can see that there are two main patterns on the graph. The first one is composed of regular workdays (Mon-Fri / 26-30 of September) and second one is just weekend days (Sat-Sun, 1-2 of October).
 
 Let’s look closely at the workdays pattern.
 
-Graph 2 "CO2 (ppm) vs Time (hours) - Workdays"
+**Graph 2 "CO2 (ppm) vs Time (hours) - Workdays"**
 ![CO2_Mon-Fri](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/CO2_Mon-Fri.png?raw=true)
 
 Main observations (and some fun facts) here are:
@@ -85,7 +85,8 @@ Main observations (and some fun facts) here are:
 5. During the night CO2 tempt to slowly decrease, but there is always a small peak somewhere in the middle of the night. It’s us moving back and forth, feeding our cat (or open/close windows to increase/decrease temperature or get some fresh air)
 
 Finally, let’s have a look on the weekend’s CO2 pattern.
-Graph 2 "CO2 (ppm) vs Time (hours) - Weekend"
+
+**Graph 2 "CO2 (ppm) vs Time (hours) - Weekend"**
 ![CO2_Sat-Sun](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/CO2_Sat-Sun.png?raw=true)
 
 This one looks a little bit messier. A few things to highlight here:

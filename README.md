@@ -29,7 +29,7 @@ Project development included the following parts:
 
 ![MVP](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/MVP.png?raw=true)
 
-## Mobile app dashboard (designed in Blynk IoT platform environment):
+## Mobile app dashboard (Blynk Legacy no-code mobile app):
 
 ![App](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/App.png?raw=true)
 
@@ -86,7 +86,7 @@ Main observations (and some fun facts) here are:
 
 Finally, let’s have a look on the weekend’s CO2 pattern.
 
-**Graph 2 "CO2 (ppm) vs Time (hours) - Weekend"**
+**Graph 3 "CO2 (ppm) vs Time (hours) - Weekends"**
 ![CO2_Sat-Sun](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/CO2_Sat-Sun.png?raw=true)
 
 This one looks a little bit messier. A few things to highlight here:

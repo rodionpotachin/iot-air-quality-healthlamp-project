@@ -78,11 +78,10 @@ Graph 2 "CO2 (ppm) vs Time (hours) - Workdays"
 Main observations (and some fun facts) here are:
 1. Our wake-up time is around 8am. You can see a clear spike in CO2 level around that time. The reason for that is because the device is placed in a living (+kitchen) room so you can clearly see when we start our morning routine.
 2. You can also note that we usually leave a house before 9am (except for Sep 27).
-3. 4-5 hours is needed for CO2 to drop to the normal outdoor level (400-450 ppm) - in our case with closed windows
-4. Clear CO2 spikes also show exact time when we arrive at home (it’s usually around 9pm)
-At this moment two thoughts jumped into my mind:
-  - CO2 sensors could be used as a home security device (with closed windows and ventilation for the sake of clarity). CO2 spikes are clear enough to show the moment people enter a house (as was shown in the above analysis).
-  - However, CO2 sensors connected to the internet could also be a potential security issue (if hacked they could be used as a hidden spy device)
+3. 4-5 hours is needed for CO2 to drop to the normal outdoor level (400-450 ppm). All windows in the house are closed but with a small gap for passive ventilation.
+4. Clear CO2 spikes also show exact time when we arrive at home (it’s usually around 9pm). At this moment two thoughts jumped into my mind:
+   - CO2 sensors could be used as a home security device (with closed windows and ventilation for the sake of clarity). CO2 spikes are clear enough to show the moment people enter a house (as was shown in the above analysis).
+   - However, CO2 sensors connected to the internet could also be a potential security issue (if hacked they could be used as a hidden spy device)
 5. During the night CO2 tempt to slowly decrease, but there is always a small peak somewhere in the middle of the night. It’s us moving back and forth, feeding our cat (or open/close windows to increase/decrease temperature or get some fresh air)
 
 Finally, let’s have a look on the weekend’s CO2 pattern.

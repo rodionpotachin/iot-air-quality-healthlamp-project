@@ -97,17 +97,18 @@ This one looks a little bit messier. A few things to highlight here:
 
 In this case study I was trying to understand how multiple measurements from the device are connected to each other.
 
-A [Dataset]() is composed from 7 days of indoor measurements of:
+A [Dataset](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/analytics/csv/DS-1.csv) is composed from 7 days of indoor measurements of:
  - CO2
  - [PM2.5](https://www.epa.gov/pm-pollution/particulate-matter-pm-basics)
  - [PM10](https://www.epa.gov/pm-pollution/particulate-matter-pm-basics)
  - Humidity
  - Temperature
 
-Analysis was made in [Pandas](https://pandas.pydata.org) open source data analysis tool. I used [k-means clustering]( https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html) method to reveal dataset’s possible insights. All details and the source code you can find in this [Jupyter notebook]().
+Analysis was made in [Pandas](https://pandas.pydata.org) open source data analysis tool. I used [k-means clustering]( https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html) method to reveal dataset’s possible insights. All details and the source code you can find in this [Jupyter notebook](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/analytics/pandas/Main.ipynb).
 
 
 **Graph 1 – Sample 1, (CO2 vs Fine Particles PM2.5/PM10) k-means clustering results**
+
 k = 4 was selected based on elbow method and silhouette coefficient
 
 ![Sample1](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/Sample1.png?raw=true)
@@ -122,6 +123,7 @@ The algorithm brings to us 4 data groups:
 |4 (Green)|LOW|HIGH|
 
 **Graph 2 – Sample 2, (CO2 vs Humidity & Temperature) k-means clustering results**
+
 k = 3 was selected based on elbow method
 
 ![Sample2](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/Sample2.png?raw=true)
@@ -135,6 +137,7 @@ The algorithm brings to us 3 data groups:
 |3 (Green)|LOW|HIGH|HIGH|
 
 **Graph 3 – Sample 3, (Humidity vs Fine Particles PM2.5/PM10) k-means clustering results**
+
 k = 3 was selected based on elbow method
 
 ![Sample3](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/Sample3.png?raw=true)

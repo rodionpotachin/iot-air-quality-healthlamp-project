@@ -165,7 +165,7 @@ Finally, here is the correlation analysis summary:
 |Hum          |HIGH |MID       |-    |HIGH  |
 |Temp         |HIGH |LOW         |HIGH | -    |
 
-**I think the above case studies show that the device is working. All sensors signals make sense and show a reasonably good correlation. There is not much outliers in the dataset. All measurements are taken in a predictable and reliable way (or at least synchronized with real life).**
+**I think the above case studies show that the device is working. All sensors signals make sense and show a reasonably good correlation. There are not many outliers in the dataset. All measurements are taken in a predictable and reliable way (or at least synchronized with real life).**
 
 # License
 

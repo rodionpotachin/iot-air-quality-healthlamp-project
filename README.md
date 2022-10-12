@@ -93,9 +93,75 @@ This one looks a little bit messier. A few things to highlight here:
 1. Wake-up time is around 10am (there is a good spike which was observed many times before)
 2. During the weekend most of the time we stayed at home, moving from one room to another (and opening and closing windows as well). So, the graph shows recurring peaks and valleys during the day.  
 
-## Case # 2
+## Case # 2 - Correlation between sensors measurement
 
-## Case # 3
+In this case study I was trying to understand how multiple measurements from the device are connected to each other.
+
+A [Dataset]() is composed from 7 days of indoor measurements of:
+ - CO2
+ - [PM2.5](https://www.epa.gov/pm-pollution/particulate-matter-pm-basics)
+ - [PM10](https://www.epa.gov/pm-pollution/particulate-matter-pm-basics)
+ - Humidity
+ - Temperature
+
+Analysis was made in [Pandas](https://pandas.pydata.org) open source data analysis tool. I used [k-means clustering]( https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html) method to reveal dataset’s possible insights. All details and the source code you can find in this [Jupyter notebook]().
+
+
+**Graph 1 – Sample 1, (CO2 vs Fine Particles PM2.5/PM10) k-means clustering results**
+k = 4 was selected based on elbow method and silhouette coefficient
+
+![Sample1](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/Sample1.png?raw=true)
+
+The algorithm brings to us 4 data groups:
+
+| Cluster | CO2 level | PM2.5/10 level |
+| --- | --- | --- |
+|1 (Blue)|HIGH|LOW|
+|2 (Purple)|HIGH|HIGH|
+|3 (Red)|LOW|LOW|
+|4 (Green)|LOW|HIGH|
+
+**Graph 2 – Sample 2, (CO2 vs Humidity & Temperature) k-means clustering results**
+k = 3 was selected based on elbow method
+
+![Sample2](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/Sample2.png?raw=true)
+
+The algorithm brings to us 3 data groups:
+
+| Cluster | CO2 level | Hum level | Temp level |
+| --- | --- | --- | --- |
+|1 (Blue)|HIGH|HIGH|HIGH|
+|2 (Red)|LOW|LOW|LOW|
+|3 (Green)|LOW|HIGH|HIGH|
+
+**Graph 3 – Sample 3, (Humidity vs Fine Particles PM2.5/PM10) k-means clustering results**
+k = 3 was selected based on elbow method
+
+![Sample3](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/Sample3.png?raw=true)
+
+The algorithm brings to us 3 data groups:
+
+| Cluster | Hum level | PM2.5/10 level |
+| --- | --- | --- |
+|1 (Blue)|LOW|LOW|
+|2 (Red)|HIGH|HIGH|
+|3 (Green)|MID|HIGH|
+
+**Main observations and results:**
+
+1. Sample # 1: CO2 and fine particles (PM2.5/PM10) levels have similar pattern, but there is no real correlation between these measurements. Fine particles in clusters 2 and 3 follow CO2 level and describe the simple theory that people presence affect fine particles level and increase their presence in the air.  At the same time, clusters 1 and 4 clearly show that PM2.5/PM10 is not really affected by people presence. Looks likely it’s based on the outdoor conditions mostly (wind speed and directions, weather in general, etc.).
+2. Sample # 2: There is a good correlation between CO2, Humidity and Temperature levels (Cluster 1 and 2). The only outlier here is the green cluster 3 (particularly time between 22-09-30 and 22-10-01).
+3. Sample # 3: There is some correlation between Humidity and fine particles level. The only clear cluster here is cluster 1, which says that usually low humidity level means low fine particles level.
+
+Correlation summary:
+
+|             | CO2 | PM2.5/10 | Hum | Temp |
+| ---         | --- | ---      | --- | ---  |
+|CO2          |-    |LOW       |HIGH |HIGH  |
+|PM2.5/10     |LOW  |-         |MID  |LOW   |
+|Hum          |HIGH |MID       |-    |HIGH  |
+|Temp         |HIGH |LOW         |HIGH | -    |
+
 
 # License
 

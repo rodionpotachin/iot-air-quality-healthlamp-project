@@ -2,7 +2,7 @@
 
 HealthLamp Air is an IoT project built on an ESP8266 microchip. It's designed to measure, record and visualize the air quality in your house in real time in a stylish way.
 
-Project status: The device was built in 2021. At the moment, the MVP has been working for one year.  
+**Project status:** The device was built in 2021. At the moment, the MVP has been working for one year.  
 
 # Product design & development
 
@@ -69,21 +69,21 @@ I hope the below graphs and observations will show how the CO2 sensor works, pos
 **Graph 1 "CO2 (ppm) vs Time (hours) - All at once"**
 ![CO2_All](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/CO2_All.png?raw=true)
 
-There are two main patterns on the above graph. The first pattern represents regular workdays (Mon-Fri / 26-30 of September) and second one shows weekend days (Sat-Sun, 1-2 of October).
+There are two main patterns on the graph above. The first pattern represents regular workdays (Mon-Fri / 26-30 of September) and the second shows weekend days (Sat-Sun, 1-2 of October).
 
 Let’s have a close look at them. We will start from the pattern # 1.
 
 **Graph 2 "CO2 (ppm) vs Time (hours) - Workdays"**
 ![CO2_Mon-Fri](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/CO2_Mon-Fri.png?raw=true)
 
-Main observations here are:
-1. Our wake-up time is around 8am. You can see a clear spike in CO2 level around that time. The reason for that is because the device is placed in a living (+kitchen) room. So you can clearly see when we wake-up and start morning routine.
-2. You could also note that we usually leave a house before 9am (except for Sep 27).
+The main observations here are:
+1. My wake-up time was around 8am. You can see a clear spike in CO2 level around that time. The reason for that is because the device is placed in a living (+kitchen) room. So you can clearly see when I waked-up and started a morning routine.
+2. You could also note that usually I left a house before 9am (except for Sep 27).
 3. 4-5 hours is needed for CO2 to drop to the normal outdoor level (370-420 ppm). All windows in the house are closed with a small gap for passive ventilation.
-4. The strong CO2 spikes also show the exact time when we arrive at home (it’s usually around 9pm). *At this moment two thoughts jumped into my mind:*
+4. The strong CO2 spikes also show the exact time when I arrived at home (it’s usually around 9pm). *At this moment two thoughts jumped into my mind:*
    - *CO2 sensors could be used as a home security device (with closed windows and ventilation for the sake of clarity). CO2 spikes are strong enough to show the moment then people enter a house.*
    - *However, CO2 sensors connected to the internet could also be a potential security issue (if hacked they could be used as a hidden spy device)*
-5. During the night CO2 level tempt to slowly decrease, but there are still some small peaks somewhere in the middle of the night. It’s us moving back and forth, feeding our cat (or open/close windows to increase/decrease temperature or get some fresh air)
+5. During the night CO2 level tempt to slowly decrease, but there are still some small peaks somewhere in the middle of the night. It was me moving back and forth feeding our cat (or open/close windows to increase/decrease temperature or get some fresh air)
 
 Finally, let’s have a look on the weekend’s CO2 pattern.
 
@@ -92,7 +92,7 @@ Finally, let’s have a look on the weekend’s CO2 pattern.
 
 This one looks a little bit messier. A few things to highlight here:
 1. The wake-up time is around 10am (there is a spike - like the one in the pattern # 1)
-2. During a weekend most of the time we stayed at home, moving from the one room to another (+opening/closing windows in addition). So, the graph shows recurring peaks and valleys during the day.  
+2. During a weekend most of the time I stayed at home, moving from the one room to another (+opening/closing windows in addition). So, the graph shows recurring peaks and valleys during the day.  
 
 ## Case # 2 - Full dataset analysis (looking for a correlation between sensors measurements)
 

@@ -1,16 +1,18 @@
 ![Intro](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/Intro.png?raw=true)
 
-HealthLamp Air is an IoT project built on the ESP8266 microchip. It's designed to measure, record and visualize the quality of air in your house in real time in the stylish way.
+HealthLamp Air is an IoT project built on an ESP8266 microchip. It's designed to measure, record and visualize the air quality in your house in real time in a stylish way.
+
+**Project status:** The device was built in 2021. At the moment, the MVP has been working for one year.  
 
 # Product design & development
 
-The main idea of this device is to be a minimalistic stylish part of your house while offering a full range of modern air quality control capabilities.
+This product is positioned to be a stylish part of your house while offering a full range of modern air quality control capabilities.
 
-I decided to use the natural materials and developed the special conical design which provide elegant air quality visualization and great airflow for precise measurements.
+I decided to use natural materials and developed a special conical design which provides elegant air quality visualization and efficient airflow for precise measurements.
 
 ![Features](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/Features.png?raw=true)
 
-Project development process include the following parts:
+The project development process includes the following steps:
 1. Product design and idea development
 2. Hardware prototyping and components selection
 2. Software development
@@ -46,9 +48,9 @@ Project development process include the following parts:
 
 # Software development
 
-The first project's draft was developed in the Arduino IDE environment. Currently, it is conducted in the [PlatformIO](https://platformio.org) framework.
+The first project's draft was developed in an Arduino IDE environment. Currently, it is conducted in the [PlatformIO](https://platformio.org) framework.
 
-All information from the device is stored and visualized in [Blynk](https://blynk.io) IoT framework (legacy one). A mobile app is developed in the Blynk no-code environment.
+All information from the device is stored and visualized in a [Blynk](https://blynk.io) IoT framework (legacy one). The mobile app is developed in a Blynk no-code environment.
 
 Project's diagram:  
 
@@ -56,33 +58,32 @@ Project's diagram:
 
 # Data validation results:
 
-The device prototype has been working for a year in my house. Thousands of rows with multiple data were collected during this time.
-In the below case studies I'm trying to check their accuracy and show some interesting facts and observations which were made during this time.
+I personally have been using this device for a year, without any issues. Thousands of rows with multiple data were collected during this time. In the case studies below, I'm validating its accuracy and presenting some interesting facts and observations which were made during this time.
 
 ## Case # 1 - CO2 dataset analysis (or “I know when you are back home”)
 
-I took 7 days of CO2 data measurement from my home and ran a small analysis (visualization was made in [Tableau Public](https://www.tableau.com)).
+I took 7 days of CO2 data measurement from my home and ran a small analysis (the visualization was made in [Tableau Public](https://www.tableau.com)).
 
-I hope the below graphs and observations will show CO2 sensor work, possible non-standard use cases, and some interesting facts about CO2 indoor behaviour.
+I hope the below graphs and observations will show how the CO2 sensor works, possible non-standard use cases, and some interesting facts about CO2 indoor behavior.
 
 **Graph 1 "CO2 (ppm) vs Time (hours) - All at once"**
 ![CO2_All](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/CO2_All.png?raw=true)
 
-There are two main patterns on the above graph. The first pattern represents regular workdays (Mon-Fri / 26-30 of September) and second one shows weekend days (Sat-Sun, 1-2 of October).
+There are two main patterns on the graph above. The first pattern represents regular workdays (Mon-Fri / 26-30 of September) and the second shows weekend days (Sat-Sun, 1-2 of October).
 
 Let’s have a close look at them. We will start from the pattern # 1.
 
 **Graph 2 "CO2 (ppm) vs Time (hours) - Workdays"**
 ![CO2_Mon-Fri](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/CO2_Mon-Fri.png?raw=true)
 
-Main observations here are:
-1. Our wake-up time is around 8am. You can see a clear spike in CO2 level around that time. The reason for that is because the device is placed in a living (+kitchen) room. So you can clearly see when we wake-up and start morning routine.
-2. You could also note that we usually leave a house before 9am (except for Sep 27).
+The main observations here are:
+1. My wake-up time was around 8am. You can see a clear spike in CO2 level around that time. The reason for that is because the device is placed in a living (+kitchen) room. So you can clearly see when I waked-up and started a morning routine.
+2. You could also note that usually I left a house before 9am (except for Sep 27).
 3. 4-5 hours is needed for CO2 to drop to the normal outdoor level (370-420 ppm). All windows in the house are closed with a small gap for passive ventilation.
-4. The strong CO2 spikes also show the exact time when we arrive at home (it’s usually around 9pm). *At this moment two thoughts jumped into my mind:*
+4. The strong CO2 spikes also show the exact time when I arrived at home (it’s usually around 9pm). *At this moment two thoughts jumped into my mind:*
    - *CO2 sensors could be used as a home security device (with closed windows and ventilation for the sake of clarity). CO2 spikes are strong enough to show the moment then people enter a house.*
    - *However, CO2 sensors connected to the internet could also be a potential security issue (if hacked they could be used as a hidden spy device)*
-5. During the night CO2 level tempt to slowly decrease, but there are still some small peaks somewhere in the middle of the night. It’s us moving back and forth, feeding our cat (or open/close windows to increase/decrease temperature or get some fresh air)
+5. During the night CO2 level tempt to slowly decrease, but there are still some small peaks somewhere in the middle of the night. It was me moving back and forth feeding our cat (or open/close windows to increase/decrease temperature or get some fresh air)
 
 Finally, let’s have a look on the weekend’s CO2 pattern.
 
@@ -91,7 +92,7 @@ Finally, let’s have a look on the weekend’s CO2 pattern.
 
 This one looks a little bit messier. A few things to highlight here:
 1. The wake-up time is around 10am (there is a spike - like the one in the pattern # 1)
-2. During a weekend most of the time we stayed at home, moving from the one room to another (+opening/closing windows in addition). So, the graph shows recurring peaks and valleys during the day.  
+2. During a weekend most of the time I stayed at home, moving from the one room to another (+opening/closing windows in addition). So, the graph shows recurring peaks and valleys during the day.  
 
 ## Case # 2 - Full dataset analysis (looking for a correlation between sensors measurements)
 

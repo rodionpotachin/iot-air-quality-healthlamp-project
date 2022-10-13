@@ -1,16 +1,18 @@
 ![Intro](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/Intro.png?raw=true)
 
-HealthLamp Air is an IoT project built on the ESP8266 microchip. It's designed to measure, record and visualize the quality of air in your house in real time in the stylish way.
+HealthLamp Air is an IoT project built on an ESP8266 microchip. It's designed to measure, record and visualize the air quality in your house in real time in a stylish way.
+
+Project status: The device was built in 2021. At the moment, the MVP has been working for one year.  
 
 # Product design & development
 
-The main idea of this device is to be a minimalistic stylish part of your house while offering a full range of modern air quality control capabilities.
+This product is positioned to be a stylish part of your house while offering a full range of modern air quality control capabilities.
 
-I decided to use the natural materials and developed the special conical design which provide elegant air quality visualization and great airflow for precise measurements.
+I decided to use natural materials and developed a special conical design which provides elegant air quality visualization and efficient airflow for precise measurements.
 
 ![Features](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/Features.png?raw=true)
 
-Project development process include the following parts:
+The project development process includes the following steps:
 1. Product design and idea development
 2. Hardware prototyping and components selection
 2. Software development
@@ -46,9 +48,9 @@ Project development process include the following parts:
 
 # Software development
 
-The first project's draft was developed in the Arduino IDE environment. Currently, it is conducted in the [PlatformIO](https://platformio.org) framework.
+The first project's draft was developed in an Arduino IDE environment. Currently, it is conducted in the [PlatformIO](https://platformio.org) framework.
 
-All information from the device is stored and visualized in [Blynk](https://blynk.io) IoT framework (legacy one). A mobile app is developed in the Blynk no-code environment.
+All information from the device is stored and visualized in a [Blynk](https://blynk.io) IoT framework (legacy one). The mobile app is developed in a Blynk no-code environment.
 
 Project's diagram:  
 
@@ -56,14 +58,13 @@ Project's diagram:
 
 # Data validation results:
 
-The device prototype has been working for a year in my house. Thousands of rows with multiple data were collected during this time.
-In the below case studies I'm trying to check their accuracy and show some interesting facts and observations which were made during this time.
+I personally have been using this device for a year, without any issues. Thousands of rows with multiple data were collected during this time. In the case studies below, I'm validating its accuracy and presenting some interesting facts and observations which were made during this time.
 
 ## Case # 1 - CO2 dataset analysis (or “I know when you are back home”)
 
-I took 7 days of CO2 data measurement from my home and ran a small analysis (visualization was made in [Tableau Public](https://www.tableau.com)).
+I took 7 days of CO2 data measurement from my home and ran a small analysis (the visualization was made in [Tableau Public](https://www.tableau.com)).
 
-I hope the below graphs and observations will show CO2 sensor work, possible non-standard use cases, and some interesting facts about CO2 indoor behaviour.
+I hope the below graphs and observations will show how the CO2 sensor works, possible non-standard use cases, and some interesting facts about CO2 indoor behavior.
 
 **Graph 1 "CO2 (ppm) vs Time (hours) - All at once"**
 ![CO2_All](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/CO2_All.png?raw=true)

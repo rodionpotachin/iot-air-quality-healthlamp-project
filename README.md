@@ -77,22 +77,22 @@ Let’s have a close look at them. We will start from the pattern # 1.
 ![CO2_Mon-Fri](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/CO2_Mon-Fri.png?raw=true)
 
 The main observations here are:
-1. My wake-up time was around 8am. You can see a clear spike in CO2 level around that time. The reason for that is because the device is placed in a living (+kitchen) room. So you can clearly see when I waked-up and started a morning routine.
-2. You could also note that usually I left a house before 9am (except for Sep 27).
-3. 4-5 hours is needed for CO2 to drop to the normal outdoor level (370-420 ppm). All windows in the house are closed with a small gap for passive ventilation.
-4. The strong CO2 spikes also show the exact time when I arrived at home (it’s usually around 9pm). *At this moment two thoughts jumped into my mind:*
-   - *CO2 sensors could be used as a home security device (with closed windows and ventilation for the sake of clarity). CO2 spikes are strong enough to show the moment then people enter a house.*
+1. My wake-up time was around 8am. You can see a clear spike in CO2 levels around that time. The reason for that is because the device was placed in my living room. So you can clearly see when I woke up and started my morning routine.
+2. You could also note that I mostly left my house before 9am (except for Sep 27).
+3. It took 4-5 hours for the CO2 level to drop to the normal outdoor level (370-420 ppm). All the windows in the house were closed with a small gap for passive ventilation.
+4. The strong CO2 spikes also show the exact time when I arrived home (it’s mostly around 9pm). *At this moment two thoughts jumped into my mind:*
+   - *CO2 sensors could be used as a home security device (ideally, with closed windows and ventilation). CO2 spikes are strong enough to show the moment when people enter a house.*
    - *However, CO2 sensors connected to the internet could also be a potential security issue (if hacked they could be used as a hidden spy device)*
-5. During the night CO2 level tempt to slowly decrease, but there are still some small peaks somewhere in the middle of the night. It was me moving back and forth feeding our cat (or open/close windows to increase/decrease temperature or get some fresh air)
+5. During the night CO2 levels tend to slowly decrease, but there are still some small peaks somewhere in the middle of the night. This could be attributed to me moving back and forth feeding our cat (or opening/closing windows to increase/decrease the temperature or to get some fresh air)
 
-Finally, let’s have a look on the weekend’s CO2 pattern.
+Finally, let’s take a look at the weekend’s CO2 pattern.
 
 **Graph 3 "CO2 (ppm) vs Time (hours) - Weekends"**
 ![CO2_Sat-Sun](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/CO2_Sat-Sun.png?raw=true)
 
 This one looks a little bit messier. A few things to highlight here:
-1. The wake-up time is around 10am (there is a spike - like the one in the pattern # 1)
-2. During a weekend most of the time I stayed at home, moving from the one room to another (+opening/closing windows in addition). So, the graph shows recurring peaks and valleys during the day.  
+1. The wake-up time was around 10am (there is a spike - like the one in the pattern # 1)
+2. During the weekend I mostly stayed at home, moving from one room to another (+opening/closing windows). So, the graph shows recurring peaks and troughs during the day.
 
 ## Case # 2 - Full dataset analysis (looking for a correlation between sensors measurements)
 
@@ -105,16 +105,16 @@ A [Dataset](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project
  - Humidity
  - Temperature
 
-The analysis was done in the [Pandas](https://pandas.pydata.org) open source data analysis tool. I used the [k-means clustering]( https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html) method to reveal dataset’s insights. All details and the source code you can find in this [Jupyter notebook](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/analytics/pandas/Main.ipynb).
+The analysis was done using [Pandas](https://pandas.pydata.org) open source data analysis tool. I used the [k-means clustering]( https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html) method to reveal the dataset’s insights. You can find all the details and source code in this [Jupyter notebook](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/analytics/pandas/Main.ipynb).
 
 
 **Graph 1 "Sample 1, (CO2 vs Fine Particles PM2.5/PM10) k-means clustering results"**
 
-k = 4 was selected based on the elbow method and silhouette coefficient *(please refer to Jupyter notebook for more details)*
+k = 4 was selected based on the elbow method and the silhouette coefficient *(please refer to the Jupyter notebook for more details)*
 
 ![Sample1](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/Sample1.png?raw=true)
 
-The algorithm brings the following 4 data clusters:
+The algorithm revealed the following 4 data clusters:
 
 | Cluster | CO2 level | PM2.5/10 level |
 | --- | --- | --- |
@@ -125,11 +125,11 @@ The algorithm brings the following 4 data clusters:
 
 **Graph 2 "Sample 2, (CO2 vs Humidity & Temperature) k-means clustering results"**
 
-k = 3 was selected based on elbow method *(please refer to Jupyter notebook for more details)*
+k = 3 was selected based on the elbow method and the silhouette coefficient *(please refer to the Jupyter notebook for more details)*
 
 ![Sample2](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/Sample2.png?raw=true)
 
-The algorithm brings the following 3 data clusters:
+The algorithm revealed the following 3 data clusters:
 
 | Cluster | CO2 level | Hum level | Temp level |
 | --- | --- | --- | --- |
@@ -139,11 +139,11 @@ The algorithm brings the following 3 data clusters:
 
 **Graph 3 "Sample 3, (Humidity vs Fine Particles PM2.5/PM10) k-means clustering results"**
 
-k = 3 was selected based on elbow method *(please refer to Jupyter notebook for more details)*
+k = 3 was selected based on the elbow method and the silhouette coefficient *(please refer to the Jupyter notebook for more details)*
 
 ![Sample3](https://github.com/rodionpotachin/iot-air-quality-healthlamp-project/blob/master/img/Sample3.png?raw=true)
 
-The algorithm brings the following 3 data clusters:
+The algorithm revealed the following 3 data clusters:
 
 | Cluster | Hum level | PM2.5/10 level |
 | --- | --- | --- |
@@ -153,9 +153,9 @@ The algorithm brings the following 3 data clusters:
 
 **Main observations and results:**
 
-1. Sample # 1: CO2 and fine particles (PM2.5/PM10) levels have pretty similar behaviour.  However, there is no real correlation between these measurements. Fine particles in clusters 2, 3 follow the CO2 level and propose a basic theory that people's presence disturb fine particles and increase their level in the air. At the same time, clusters 1 and 4 clearly show that PM2.5/PM10 is not really affected by people's presence. Looks likely it’s more affected by the outdoor conditions (wind speed and directions, weather in general, etc.) and potential industrial pollutant.
-2. Sample # 2: There is a good correlation between CO2, Humidity and Temperature levels (Cluster 1 and 2). The only outlier here is the green cluster. Have a look at the measurements at the time between Sep 30 and Oct 1 (the humidity level shows a clear peak while CO2 constantly decreases).
-3. Sample # 3: There is a some kind of correlation between Humidity and fine particles level. The only robust cluster here is cluster # 1. It says that low humidity level means low fine particles level (in our experiment).
+1. Sample # 1: The CO2 and fine particle (PM2.5/PM10) levels behave quite similarly. However, there is no real correlation between these measurements. The fine particle levels in clusters 2, 3 follow the CO2 level and propose a basic theory that people's presence disturbs fine particles and increases their level in the air. At the same time, clusters 1 and 4 clearly show that PM2.5/PM10 levels are not really affected by people's presence. It looks likely that it gets affected by outdoor conditions (wind speed and directions, weather in general, etc.) and potential industrial pollutants.
+2. Sample # 2: There is a strong correlation between CO2, Humidity and Temperature levels (Cluster 1 and 2). The only outlier here is the green cluster (have a look at the measurements at the time between Sep 30 and Oct 1. The humidity level shows a clear peak while the CO2 constantly decreases).
+3. Sample # 3: There is some kind of correlation between Humidity and Fine particle levels. The only robust cluster here is cluster # 1. It shows that low Humidity levels are linked to low Fine particle levels (at least in our experiment).
 
 Finally, here is the correlation analysis summary:
 
@@ -166,7 +166,7 @@ Finally, here is the correlation analysis summary:
 |Hum          |HIGH |MID       |-    |HIGH  |
 |Temp         |HIGH |LOW         |HIGH | -    |
 
-**I think the above case studies show that the device is working. All sensors signals make sense and show a reasonably good correlation. There are not many outliers in the dataset. All measurements are taken in a predictable and reliable way (or at least synchronized with real life).**
+I think the above case studies show that the device is working. All the sensor signals are synchronized with real world conditions and show a reasonable correlation.
 
 # License
 

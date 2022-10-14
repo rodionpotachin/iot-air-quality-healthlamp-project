@@ -1,7 +1,4 @@
-#define FASTLED_INTERRUPT_RETRY_COUNT 0
-#define FASTLED_ESP8266_RAW_PIN_ORDER
-
-// Beginning of: Libraries ...
+// List of the libraries to include
 #include <Arduino.h>
 #include <ESP8266WiFi.h>
 #include <BlynkSimpleEsp8266.h>
@@ -15,14 +12,16 @@
 #include <WiFiUdp.h>
 #include <ArduinoOTA.h>
 
-// Beginning of: WI-FI data ...
+// WI-FI credentials 
 char auth[] = "Your_Blynk_Authentication";
 char ssidBlynk[] = "Your_WiFi_Name";
 char passBlynk[] = "Your_WiFi_Password";
 const char *ssid = ssidBlynk;
 const char *password = passBlynk;
 
-// Beginning of: PINs ...
+// Hardware ESP8266 INPUT/OUTPUT pins
+#define FASTLED_INTERRUPT_RETRY_COUNT 0
+#define FASTLED_ESP8266_RAW_PIN_ORDER
 #define BLYNK_PRINT Serial
 Adafruit_SHT31 sht31 = Adafruit_SHT31();
 SoftwareSerial mySerialS8(D5, D6);
@@ -32,8 +31,7 @@ SoftwareSerial mySerialS8(D5, D6);
 #define NUM_LEDS 8
 CRGB leds[NUM_LEDS];
 
-
-// Beginning of: Variables ...
+// Variables
 float hum;
 float temp;
 byte cmdS8[7] = {0xFE, 0x44, 0x00, 0x08, 0x02, 0x9F, 0x25};
@@ -45,15 +43,17 @@ float SDS_pm10;
 int fill_check = 0;
 int delay_value = 0;
 int NUM_LEDS_value = 0;
-
-// Beginning of: Timer ...
 BlynkTimer timer;
 
+
+// Read humidity and temperature from a SHT31 sensor - I2C 
 void SHT31() {
   hum = sht31.readHumidity();
   temp = sht31.readTemperature();  
 }
 
+
+// Read PM2.5 and PM10 from a SDS11 sensor - UART 
 void Dust() {
   PmResult pm = sds.readPm();
   if (pm.isOk())
@@ -63,6 +63,8 @@ void Dust() {
   }
 }
 
+
+// Read CO2 from a S8 sensor - UART
 void S8() {
   unsigned int responseHigh;
   unsigned int responseLow;
@@ -76,6 +78,8 @@ void S8() {
   }
 }
 
+
+// To print the measurement result in a convenient way
 void printTo(String name, float value, String ea, int blynkPort) {
   Serial.print(name + "   : ");
   Serial.print(value);
@@ -84,6 +88,8 @@ void printTo(String name, float value, String ea, int blynkPort) {
   Blynk.virtualWrite(blynkPort, value);
 }
 
+
+// To print all the measurements to a terminal and Blynk server as one batch
 void printing() {
   printTo("Humidity", hum, "%", V0);
   printTo("Temperature", temp, "C", V1);
@@ -92,6 +98,8 @@ void printing() {
   printTo("CO2", ppmS8, "ppm", V4);
 }
 
+
+// Process and visualize the quality of air
 void Mode1_lightAuto() {
   int y1 = 0;
   int y2 = 0;
@@ -118,6 +126,8 @@ void Mode1_lightAuto() {
   }
 }
 
+
+// Combine all the functions and execute them 
 void readRun(){
   SHT31();
   Dust();
@@ -126,10 +136,14 @@ void readRun(){
   Mode1_lightAuto();
 }
 
+
+// The setup function (runs only single time - when the device is turn ON)
 void setup() {
-  // Beginning of: Arduino WIFI OTA & Blynk
+  // Initialize a terminal
   Serial.begin(9600);
   Serial.println("Booting");
+
+  // Arduino OTA Initializer (to send a code other the air)
   WiFi.mode(WIFI_STA);
   WiFi.begin(ssid, password);
   while (WiFi.waitForConnectResult() != WL_CONNECTED)
@@ -145,11 +159,9 @@ void setup() {
       type = "sketch";
     }
     else
-    { // U_FS
+    {
       type = "filesystem";
     }
-
-    // NOTE: if updating FS this would be the place to unmount FS using FS.end()
     Serial.println("Start updating " + type);
   });
   ArduinoOTA.onEnd([]() {
@@ -185,31 +197,32 @@ void setup() {
   Serial.println("Ready");
   Serial.print("IP address: ");
   Serial.println(WiFi.localIP());
-
+  
+  // Start a connection with the Blynk server  
   Blynk.begin(auth, ssidBlynk, passBlynk);
 
+  // Initialize sensors
   mySerialS8.begin(9600);
-
-  // Beginning of: SHT31 ...
   sht31.begin(0x44);
-
-  // Beginning of: SDS ...
   sds.begin();
-  sds.setActiveReportingMode().toString();  // ensures sensor is in 'active' reporting mode
-  sds.setCustomWorkingPeriod(3).toString(); // sensor sends data every 3 minutes
+  sds.setActiveReportingMode().toString();  // ensures S8 sensor is in 'active' reporting mode
+  sds.setCustomWorkingPeriod(3).toString(); // sensor S8 sends data every 3 minutes
 
-  // Blynk Timer for 30 sec
+  // Set Blynk timer for 30 sec
+  // Kick the main 'readRun()' function
   timer.setInterval(30000L, readRun);
 
-  // Led initializer
+  // Initialize LED
   FastLED.addLeds<WS2812, LED_PIN, GRB>(leds, NUM_LEDS);
   fill_solid(leds, NUM_LEDS, CRGB(0, 0, 0));
   FastLED.setBrightness(0);
   FastLED.show();
 }
 
+
+// The main loop - it calls all the other functions and runs indefinitely
 void loop() {
   ArduinoOTA.handle();
   Blynk.run();
-  timer.run();
+  timer.run(); // Call the 'readRun()' function every 30 sec
 }
